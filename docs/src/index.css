@@ -1,0 +1,44 @@
+.App{
+  text-align: center;
+  font-family: sans-serif;
+  font-size: larger;
+}
+
+body{
+  background-color: #444;
+  color: white;
+}
+
+.Board{
+  display:flex;
+  flex-direction: column;
+}
+
+.Board-row{
+  display:flex;
+  flex-flow: row nowrap;
+  margin:0 auto;
+}
+
+.Square{
+  background-color: #444;
+  color:white;
+  
+  border: 1px solid white;
+  padding: 0px;
+  line-height: 10px;
+  font-size: 80px;
+  text-align: center;
+  width:100px;
+  height:100px;
+}
+
+.square:focus{
+  outline: none;
+  background-color: #222;
+}
+
+.chance{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
