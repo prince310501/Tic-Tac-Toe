@@ -12,3 +12,4 @@ only main
 isisi
 want conflict in main
 ppppp conflict
+want conflict in branch1
