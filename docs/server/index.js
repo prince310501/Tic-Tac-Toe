@@ -9,7 +9,7 @@ const Board=require('./models/Board')
 
 require('dotenv/config')
 
-const PORT=5000
+// const PORT=5000
 const app=express()
 const server=http.createServer(app)
 const io=socketio(server,{
@@ -138,4 +138,4 @@ const resetBoard=async(id)=>{
     return board
 }
 
-server.listen(PORT,()=>console.log(`connected at port ${PORT}`))
+server.listen(process.env.PORT || 5000,()=>console.log(`connected at port server`))

@@ -32,6 +32,7 @@ const Game = (props) => {
             }
             else{
                 setUserCredentials(res.data.info)
+                
             }
         })
         .catch(err=>console.log(err))
