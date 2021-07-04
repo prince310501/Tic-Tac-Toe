@@ -4,6 +4,10 @@ const User=require('../models/User')
 const Board=require('../models/Board')
 const mongoose=require('mongoose')
 
+route.get('/',(req,res)=>{
+    res.send('Server working')
+})
+
 route.get('/credentials',async(req,res)=>{
     const {channel}=req.query
     const boardFound=await Board.findOne({gameId:channel})
