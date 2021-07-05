@@ -5,7 +5,7 @@ const Board=require('../models/Board')
 const mongoose=require('mongoose')
 
 route.get('/',(req,res)=>{
-    res.send('Server working')
+    res.json({msg:'Server working'})
 })
 
 route.get('/credentials',async(req,res)=>{
