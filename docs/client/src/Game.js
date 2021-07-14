@@ -32,7 +32,7 @@ const Game = (props) => {
             }
             else{
                 setUserCredentials(res.data.info)
-                
+
             }
         })
         .catch(err=>console.log(err))
@@ -42,7 +42,7 @@ const Game = (props) => {
     }, [])
 
     useEffect(()=>{
-        const s=io('http://localhost:5000')
+        const s=io(process.env.REACT_APP_API) 
         setSocket(s)
         return ()=>{
             s.disconnect()

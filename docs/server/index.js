@@ -14,7 +14,7 @@ const app=express()
 const server=http.createServer(app)
 const io=socketio(server,{
     cors:{
-        origin:"http://localhost:3000",
+        origin:process.env.FRONT_URI,
         methods:["GET","POST","PUT","DELETE"],
         credentials:true
     }
@@ -23,12 +23,12 @@ const io=socketio(server,{
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cors({
-    origin:"http://localhost:3000",
+    origin:process.env.FRONT_URI,
     methods:["GET","POST","PUT","DELETE"],
-    credentials:true
+    credentials:true 
 })) 
 app.use('/',route)
-
+// console.log(process.env.URI)
 mongoose.connect(process.env.URI,{ useNewUrlParser: true, useUnifiedTopology: true ,useCreateIndex:true, useFindAndModify:false},(err)=>{
     if(err)
         console.log(err)
